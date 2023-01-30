@@ -200,9 +200,15 @@ function Install-ghidra {
     $batchCommands | Out-File -FilePath $batchFile
 }
 
+function Install-7Zip
+{
+    [void](Install-GenericInstaller -InstallerUrl "https://www.7-zip.org/a/7z2201-x64.exe" -InstallerArgs "/S /D={destination}" -ToolName "7zip" -InnerExecutable "7zFM.exe")
+}
+
 Install-Ida
 Install-ILSpy
 Install-dnSpy
 Install-VSCode
 Install-x64dbg
 Install-ghidra
+Install-7Zip
