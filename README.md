@@ -7,7 +7,7 @@ The following is intended to setup an environment with some tools that will be h
 
 ## Admin Powershell
 ```
-Set-ExecutionPolicy Unrestricted; $WebClient.DownloadFile("https://raw.githubusercontent.com/xoorath/xo-re/main/install.ps1","C:\Users\WDAGUtilityAccount\Desktop\install.ps1")
+Set-ExecutionPolicy Unrestricted; (New-Object System.Net.WebClient).DownloadFile("https://raw.githubusercontent.com/xoorath/xo-re/main/install.ps1","$([Environment]::GetFolderPath('Desktop'))\install.ps1")
 ```
 
 ## User Powershell
