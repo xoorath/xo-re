@@ -12,5 +12,5 @@ Set-ExecutionPolicy Unrestricted; (New-Object System.Net.WebClient).DownloadFile
 
 ## User Powershell
 ```
-& [Environment]::GetFolderPath("Desktop")/install.ps1
+&"$([Environment]::GetFolderPath('Desktop'))/install.ps1"
 ```
